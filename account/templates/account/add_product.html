@@ -1,0 +1,58 @@
+{% extends "account/base.html" %}
+      {% block content %}
+<div id="userPage"></div>
+<div class="pcoded-content">
+  <div class="pcoded-inner-content">
+    <div class="main-body">
+      <div class="page-wrapper">
+        <div class="page-header card">
+          <div class="row align-items-end">
+            <div class="col-sm-6 col-lg-6">
+              <div class="page-header-title d-flex">
+                <i class="ti-user bg-c-green"></i>
+                <div class="d-inline">
+                  <h4>Category Management</h4>
+                </div>
+                <a href="" class="btn btn-primary" style="border-radius: 0.9rem;background-color: rgb(80, 173, 179);">Add Category</a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-6">
+              <div class="page-header-breadcrumb">
+                <div class="page-header-breadcrumb">
+                  <ul class="breadcrumb-title">
+                    <li class="breadcrumb-item">
+                      <a href="/">
+                        <i class="icofont icofont-home"></i>
+                      </a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="">Category Management</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="page-body">
+          <div class="container"> 
+            <form method="POST" >
+              {% csrf_token %}
+      <div class="input-group">
+          {{ form1 }}
+               <div class="input-group-append">
+          <button type="submit" class="btn" style="background-color: #225662;color: #ffff;font-size: 13px;"><span class="input-group-text" id="">add</span></button>
+      </div>
+      </div>
+      </form>
+    </div>
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+</div> 
+
+{% endblock content %}
